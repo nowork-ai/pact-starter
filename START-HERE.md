@@ -80,6 +80,9 @@ Po nastaveni zkus napr.:
 | "Napis email v mem stylu" | AI precte tvuj tone-of-voice a napise email, ktery zni jako ty |
 | "Pouzij agent-expert-panel na tema X" | AI spusti simulovanou expertni diskuzi |
 | "Zkontroluj tento text" | AI pouzije agent-quality-gate a da ti feedback |
+| "Prozkoumej tema Y" | AI spusti hloubkovy vyzkum pres agent-deep-researcher |
+| "Analyzuj tuhle tabulku" | AI pouzije agent-data-analyst na analyzu dat |
+| "Specifikace produktu Z" | AI vytvori PRD pres agent-product-architect |
 
 ---
 
@@ -91,9 +94,15 @@ pact-starter/
 ├── .cursorrules                   ← Pravidla pro Cursor AI
 ├── 0_Projects/                    ← Tvoje projekty
 ├── 1_Agents/                      ← AI agenti a skills
-│   ├── agent-prompt-architect.md  ← Vytvari dalsi agenty
-│   ├── agent-expert-panel.md      ← Expertni diskuze
-│   ├── agent-quality-gate.md      ← Kontrola kvality
+│   ├── AGENT-REGISTRY.md          ← Prehled vsech 12 agentu
+│   ├── RECIPES.md                 ← Workflow recepty (jak retezit agenty)
+│   ├── agent-prompt-architect.md  ← Vytvari prompty a dalsi agenty
+│   ├── agent-expert-panel.md      ← Expertni diskuze (3-5 real. expertu)
+│   ├── agent-deep-researcher.md   ← Hloubkovy vyzkum s citacemi
+│   ├── agent-data-analyst.md      ← Analyza dat (chunking, map-reduce)
+│   ├── agent-product-architect.md ← Z napadu → PRD + Developer Brief
+│   ├── agent-quality-gate.md      ← PASS/FAIL kontrola vystupu
+│   ├── ...a dalsi                 ← Viz AGENT-REGISTRY.md
 │   └── skills/                    ← Skills (slozky s SKILL.md)
 ├── 2_Context/                     ← Tvuj kontext
 │   ├── identity/about-me.md       ← Kdo jsi
@@ -104,7 +113,23 @@ pact-starter/
 │   ├── api/                       ← API klice + navod
 │   └── README.md                  ← Roadmapa nastroju
 └── docs/                          ← Dokumentace
+    ├── MUJ-PRVNI-AGENT.md         ← Tutorial: jak vytvorit agenta
+    ├── PACT-ARCHITECTURE.md       ← Architektura systemu
+    └── PACT-ZA-5-MINUT.md         ← Rychly prehled
 ```
+
+---
+
+## Dalsi materialy
+
+| Co | Kde |
+|----|-----|
+| Prehled vsech 12 agentu | `1_Agents/AGENT-REGISTRY.md` |
+| Workflow recepty (retezeni agentu) | `1_Agents/RECIPES.md` |
+| Tutorial: Jak vytvorit agenta | `docs/MUJ-PRVNI-AGENT.md` |
+| Nastaveni API klicu | `3_Tools/api/README.md` |
+| Roadmapa nastroju | `3_Tools/README.md` |
+| Architektura PACT | `docs/PACT-ARCHITECTURE.md` |
 
 ---
 
@@ -115,6 +140,8 @@ pact-starter/
 - **PACT funguje s jakymkoliv AI nastrojem.** Cursor, Claude Code, ChatGPT, Windsurf — princip je stejny.
 - **Aktualizuj prubezne.** Context je zivy dokument. Pridavej priklady, upresňuj styl.
 - **Nastroje jsou volitelne.** API klice a nastroje jsou bonus — PACT funguje i bez nich.
+- **Chces vytvorit vlastniho agenta?** Zacni s `docs/MUJ-PRVNI-AGENT.md` — za 15 minut budes mit prvniho.
+- **Nevid jak agenty kombinovat?** `1_Agents/RECIPES.md` ma 7 hotovych workflow retezu.
 
 ---
 

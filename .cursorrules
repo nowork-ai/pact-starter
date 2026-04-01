@@ -16,6 +16,31 @@ Tento workspace pouziva PACT strukturu:
 4. Nastroje hledej v `3_Tools/`
 5. Pro kontext a referenci viz `2_Context/`
 6. Kdyz uzivatel chce novy nastroj, mrkni na roadmapu v `3_Tools/README.md`
+7. Pro recepty a workflow viz `1_Agents/RECIPES.md`
+8. Pro tutorial "Muj prvni agent" viz `docs/MUJ-PRVNI-AGENT.md`
+
+---
+
+## Aktivace agentu
+
+Kdyz uzivatel rekne neco z triggeru, automaticky nacti prislusneho agenta a ridis se jeho instrukcemi.
+
+| Trigger | Agent | Co dela |
+|---------|-------|---------|
+| "vytvor prompt", "napis prompt", "prompt pro AI", "system prompt" | `1_Agents/agent-prompt-architect.md` | Vytvori precizni prompt pro LLM |
+| "expert panel", "diskuze expertu", "vice uhlu pohledu", "co by rekli experti" | `1_Agents/agent-expert-panel.md` | Simuluje diskuzi 3-5 realnch expertu |
+| "zkontroluj", "review", "quality gate", "je to dobre?", "zkontroluj vystup" | `1_Agents/agent-quality-gate.md` | Finalni PASS/FAIL kontrola vystupu |
+| "prozkoumej", "vyzkum", "research", "najdi informace", "zjisti" | `1_Agents/agent-deep-researcher.md` | Hloubkovy vyzkum s citacemi a zdroji |
+| "analyzuj data", "analyzuj dokumenty", "zpracuj tabulku", "analyzuj CSV" | `1_Agents/agent-data-analyst.md` | Analyza velkych dat (chunking, map-reduce) |
+| "prozkoumej slozku", "kontextovy dokument", "co je v teto slozce" | `1_Agents/agent-context-builder.md` | Vytvori kontextovy dokument z projektove slozky |
+| "analyzuj muj styl", "tone of voice", "jak pisu", "personal brand" | `1_Agents/agent-personal-voice-analyst.md` | Analyza komunikacniho stylu z textu |
+| "extrahuj znalosti", "vytvor agenta z dokumentu", "knowledge base" | `1_Agents/agent-knowledge-extractor.md` | Extrakce znalosti → agent prompt |
+| "specifikace produktu", "PRD", "napad na produkt", "chci postavit" | `1_Agents/agent-product-architect.md` | Z napadu vytvori PRD + Developer Brief |
+| "vytvor skill", "novy skill", "SKILL.md", "postav skill" | `1_Agents/agent-skill-builder.md` | Vytvori SKILL.md pro Claude Code/Cursor/PACT |
+| "preved do HTML", "markdown to HTML", "udelej HTML", "publikuj dokument" | `1_Agents/agent-markdown-to-html.md` | Konvertuje Markdown na krasny HTML |
+| "claude code", "jak pouzit claude", "instalace claude", "claude pomoc" | `1_Agents/agent-claude-code-guide.md` | Pruvodce Claude Code od instalace po pokrocile |
+| "recept", "workflow", "jak kombinovat agenty", "retezit agenty" | `1_Agents/RECIPES.md` | Prehled workflow retezu |
+| "muj prvni agent", "jak vytvorit agenta", "tutorial agent" | `docs/MUJ-PRVNI-AGENT.md` | Tutorial tvorby agenta od nuly |
 
 ## Klicove cesty
 
