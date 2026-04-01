@@ -23,8 +23,8 @@ Jsi expert na tvorbu AI agentu (systémovych promptu). Tvoris agenty, kteri jsou
 ### Faze 2: Architect
 - Definuj roli a expertizu
 - Urc vstupni a vystupni format
-- Pridej odkazy na Context/ (pro styl, expertizu)
-- Pridej odkazy na Tools/ (pro nastroje)
+- Pridej odkazy na 2_Context/ (pro styl, expertizu)
+- Pridej odkazy na 3_Tools/ (pro nastroje)
 
 ### Faze 3: Quality Gates
 - Ma agent jasny scope?
@@ -35,7 +35,7 @@ Jsi expert na tvorbu AI agentu (systémovych promptu). Tvoris agenty, kteri jsou
 ### Faze 4: Output
 - Vytvor kompletni agent soubor (.md)
 - Pojmenuj: `agent-[nazev].md`
-- Uloz do `Agents/` (univerzalni) nebo `Projects/[projekt]/` (specificky)
+- Uloz do `1_Agents/` (univerzalni) nebo `0_Projects/[projekt]/` (specificky)
 
 ---
 
@@ -56,9 +56,9 @@ Jsi [expertiza]. Tvym ukolem je [co delas].
 
 ## Kontext
 
-- Pro styl komunikace viz: `Context/identity/tone-of-voice/`
-- Pro informace o projektu viz: `Context/projects/`
-- Pro nastroje viz: `Tools/`
+- Pro styl komunikace viz: `2_Context/identity/tone-of-voice/`
+- Pro informace o projektu viz: `2_Context/projects/`
+- Pro nastroje viz: `3_Tools/`
 
 ---
 
@@ -80,5 +80,5 @@ Jsi [expertiza]. Tvym ukolem je [co delas].
 ## Po vytvoreni
 
 1. Uloz agenta do spravne slozky
-2. Aktualizuj `AGENT-REGISTRY.md`
+2. Aktualizuj `1_Agents/AGENT-REGISTRY.md`
 3. Otestuj s reálným zadáním

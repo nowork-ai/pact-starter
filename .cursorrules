@@ -3,27 +3,31 @@
 ## Architektura
 
 Tento workspace pouziva PACT strukturu:
-- **P**rojects/ — Aktivni projekty s vystupy
-- **A**gents/ — AI agenti (.md) a skills (slozky s SKILL.md) — instrukce a workflow
-- **C**ontext/ — Identita, tone of voice, expertiza, cile
-- **T**ools/ — Skripty, API integrace, utility
+- **P** `0_Projects/` — Aktivni projekty s vystupy
+- **A** `1_Agents/` — AI agenti (.md) a skills (slozky s SKILL.md) — instrukce a workflow
+- **C** `2_Context/` — Identita, tone of voice, expertiza, cile
+- **T** `3_Tools/` — Skripty, API integrace, utility
 
 ## Pravidla pro AI
 
-1. Pri psani textu VZDY nacti `Context/identity/tone-of-voice/` pro spravny styl
-2. Pri tvorbe agenta/skillu pouzij `Agents/agent-prompt-architect.md` (agent) nebo `Agents/skills/README.md` (skill)
-3. Vystupy ukladej do prislusneho projektu v `Projects/`
-4. Nastroje hledej v `Tools/`
-5. Pro kontext a referenci viz `Context/`
+1. Pri psani textu VZDY nacti `2_Context/identity/tone-of-voice/` pro spravny styl
+2. Pri tvorbe agenta/skillu pouzij `1_Agents/agent-prompt-architect.md` (agent) nebo `1_Agents/skills/README.md` (skill)
+3. Vystupy ukladej do prislusneho projektu v `0_Projects/`
+4. Nastroje hledej v `3_Tools/`
+5. Pro kontext a referenci viz `2_Context/`
+6. Kdyz uzivatel chce novy nastroj, mrkni na roadmapu v `3_Tools/README.md`
 
 ## Klicove cesty
 
 | Ucel | Cesta |
 |------|-------|
-| Agenti a skills | `Agents/` (agenti = .md, skills = slozky s SKILL.md) |
-| Tone of voice | `Context/identity/tone-of-voice/` |
-| Cile | `Context/goals/` |
-| Nastroje | `Tools/` |
+| Projekty | `0_Projects/` |
+| Agenti a skills | `1_Agents/` (agenti = .md, skills = slozky s SKILL.md) |
+| Kontext a identita | `2_Context/` |
+| Tone of voice | `2_Context/identity/tone-of-voice/` |
+| Cile | `2_Context/goals/` |
+| Nastroje | `3_Tools/` |
+| API klice | `3_Tools/api/` (navod v `3_Tools/api/README.md`) |
 
 ---
 
@@ -33,11 +37,11 @@ Kdyz uzivatel rekne "setup", "nastav PACT", "pomoz mi nastavit", "start", "zacni
 
 Komunikuj cesky, pratelsky, strucne. Pouzivej osloveni "ty".
 
-### Postup (5 kroku)
+### Postup (6 kroku)
 
 **KROK 1 — Kdo jsi**
 
-1. Precti soubor `Context/identity/about-me.md`
+1. Precti soubor `2_Context/identity/about-me.md`
 2. Pokud obsahuje `[PLACEHOLDER]` nebo `[DOPLNIT]`, zeptej se uzivatele:
    - "Jak se jmenujes a co delas? (role, firma, obor)"
    - "Co je tvoje hlavni zamereni? (2-3 vety)"
@@ -47,7 +51,7 @@ Komunikuj cesky, pratelsky, strucne. Pouzivej osloveni "ty".
 
 **KROK 2 — Jak komunikujes**
 
-1. Precti soubor `Context/identity/tone-of-voice/general.md`
+1. Precti soubor `2_Context/identity/tone-of-voice/general.md`
 2. Pokud obsahuje `[PLACEHOLDER]` nebo `[DOPLNIT]`, zeptej se uzivatele:
    - "Jak pises? Spis formalne nebo neformalne?"
    - "Jake fraze nebo slova typicky pouzivas?"
@@ -58,14 +62,20 @@ Komunikuj cesky, pratelsky, strucne. Pouzivej osloveni "ty".
 
 **KROK 3 — Tvoje cile**
 
-1. Precti soubor `Context/goals/goals.md`
+1. Precti soubor `2_Context/goals/goals.md`
 2. Pokud obsahuje `[PLACEHOLDER]` nebo `[DOPLNIT]`, zeptej se uzivatele:
    - "Na cem ted pracujes? Jake mas nejblizsi cile?"
    - "Co chces dosahnout do konce roku?"
 3. Odpovedi zapis do `goals.md`
 4. Rekni: "Cile nastavene."
 
-**KROK 4 — Prvni agent**
+**KROK 4 — API klice**
+
+1. Rekni: "Pro pouzivani AI nastroju budes potrebovat API klic. Nejjednodussi start je OpenRouter — jeden klic, stovky modelu."
+2. Odkaz uzivatele na `3_Tools/api/README.md` — tam je navod krok za krokem
+3. Pokud uzivatel klic uz ma, pokracuj. Pokud ne, nech ho to nastavit a vrat se.
+
+**KROK 5 — Prvni agent**
 
 1. Rekni: "Ted ti vytvorim prvniho agenta na miru. Na co potrebujes pomoc? Napr.:"
    - "Psani emailu"
@@ -73,15 +83,15 @@ Komunikuj cesky, pratelsky, strucne. Pouzivej osloveni "ty".
    - "Tvorba obsahu pro socialni site"
    - "Zpracovani schuzek"
    - "Neco jineho?"
-2. Precti `Agents/agent-prompt-architect.md` a podle nej vytvor noveho agenta
-3. Noveho agenta uloz do `Agents/` s nazvem `agent-[tema].md`
-4. Zaregistruj ho v `Agents/AGENT-REGISTRY.md`
-5. Rekni: "Agent vytvoren! Najdes ho v Agents/agent-[tema].md"
+2. Precti `1_Agents/agent-prompt-architect.md` a podle nej vytvor noveho agenta
+3. Noveho agenta uloz do `1_Agents/` s nazvem `agent-[tema].md`
+4. Zaregistruj ho v `1_Agents/AGENT-REGISTRY.md`
+5. Rekni: "Agent vytvoren! Najdes ho v 1_Agents/agent-[tema].md"
 
-**KROK 5 — Prvni projekt**
+**KROK 6 — Prvni projekt**
 
 1. Zeptej se: "Na jakem projektu ted pracujes? Jak se jmenuje?"
-2. Vytvor slozku `Projects/[nazev-projektu]/`
+2. Vytvor slozku `0_Projects/[nazev-projektu]/`
 3. Vytvor v ni `README.md` s popisem projektu a cilem
 4. Rekni: "Projekt pripraven. Muzes do nej pridat vstupni materialy a zacit pracovat."
 
@@ -89,7 +99,7 @@ Komunikuj cesky, pratelsky, strucne. Pouzivej osloveni "ty".
 
 Rekni uzivateli:
 - "PACT je nastaveny! Tady je shrnutí:"
-- Vypis co je vyplnene (profil, styl, cile, agent, projekt)
+- Vypis co je vyplnene (profil, styl, cile, API klice, agent, projekt)
 - "Od ted muzes rikat napr.: 'Napis email v mem stylu' nebo 'Pouzij agent-[tema] na [ukol]' a ja budu cekat tvuj kontext."
 
 ### Dulezite

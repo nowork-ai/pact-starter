@@ -38,5 +38,5 @@
 ## Jak pridat agenta
 
 1. Pouzij `agent-prompt-architect.md` pro vytvoreni
-2. Uloz do `Agents/` (univerzalni) nebo `Projects/[projekt]/` (specificky)
+2. Uloz do `1_Agents/` (univerzalni) nebo `0_Projects/[projekt]/` (specificky)
 3. Pridej radek do tabulky vyse

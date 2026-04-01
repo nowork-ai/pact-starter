@@ -16,7 +16,7 @@ Nebo rovnou otevri chat (Cmd+L) a napis:
 Pomoz mi nastavit PACT
 ```
 
-AI te provede 5 kroky — vyplnis kdo jsi, jak pises, jake mas cile, a vytvoris si prvniho agenta. Hotovo za 10 minut.
+AI te provede 6 kroky — vyplnis kdo jsi, jak pises, jake mas cile, nastavis API klice, a vytvoris si prvniho agenta. Hotovo za 10 minut.
 
 ---
 
@@ -26,10 +26,10 @@ Ctyri slozky, ctyri otazky:
 
 | Slozka | Otazka | Co tam patri |
 |--------|--------|-------------|
-| **Projects/** | CO delam? | Aktivni projekty s vystupy |
-| **Agents/** | JAK to udelat? | Instrukce pro AI — agenti (.md) nebo skills (slozky s SKILL.md) |
-| **Context/** | KDO to dela? | Tvoje identita, styl, expertiza, cile |
-| **Tools/** | CIM to udelat? | Skripty, API integrace, utility |
+| `0_Projects/` | CO delam? | Aktivni projekty s vystupy |
+| `1_Agents/` | JAK to udelat? | Instrukce pro AI — agenti (.md) nebo skills (slozky s SKILL.md) |
+| `2_Context/` | KDO jsem a co delam? | Tvoje identita, styl, expertiza, cile |
+| `3_Tools/` | CIM to udelat? | Skripty, API integrace, utility |
 
 **Proc to funguje:** AI bez kontextu generuje genericky vystup. S PACT ma AI pristup k tomu, kdo jsi, jak komunikujes a co delas — a vysledky jsou radove lepsi.
 
@@ -39,20 +39,22 @@ Ctyri slozky, ctyri otazky:
 
 ```
 pact-starter/
-├── START-HERE.md            ← Zacni tady
-├── .cursorrules             ← Pravidla pro Cursor AI
-├── Projects/                ← Tvoje projekty
-├── Agents/                  ← AI agenti
+├── START-HERE.md                  ← Zacni tady
+├── .cursorrules                   ← Pravidla pro Cursor AI
+├── 0_Projects/                    ← Tvoje projekty
+├── 1_Agents/                      ← AI agenti a skills
 │   ├── agent-prompt-architect.md
 │   ├── agent-expert-panel.md
 │   └── agent-quality-gate.md
-├── Context/                 ← Tvuj kontext
+├── 2_Context/                     ← Tvuj kontext
 │   ├── identity/about-me.md
 │   ├── identity/tone-of-voice/
 │   ├── goals/goals.md
 │   └── expertise/
-├── Tools/                   ← Nastroje
-└── docs/                    ← Dokumentace
+├── 3_Tools/                       ← Nastroje
+│   ├── api/                       ← API klice + navod
+│   └── README.md                  ← Roadmapa nastroju
+└── docs/                          ← Dokumentace
 ```
 
 ---
@@ -70,7 +72,9 @@ pact-starter/
 
 - `docs/PACT-ZA-5-MINUT.md` — rychly pruvodce
 - `docs/PACT-ARCHITECTURE.md` — architektura frameworku
-- `Agents/skills/README.md` — skills = strukturovane workflow (otevreny standard [agentskills.io](https://agentskills.io))
+- `1_Agents/skills/README.md` — skills = strukturovane workflow (otevreny standard [agentskills.io](https://agentskills.io))
+- `3_Tools/api/README.md` — navod na API klice (OpenRouter, OpenAI, Apify)
+- `3_Tools/README.md` — roadmapa nastroju
 
 ---
 

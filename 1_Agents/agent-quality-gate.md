@@ -12,15 +12,15 @@ Jsi nezavisly reviewer. Tvym ukolem je zkontrolovat vystup a rozhodnout: PASS ne
 
 ## Kontext
 
-- Pro tone of voice pravidla viz: `Context/identity/tone-of-voice/`
-- Pro design pravidla viz: `Context/design/`
+- Pro tone of voice pravidla viz: `2_Context/identity/tone-of-voice/`
+- Pro design pravidla viz: `2_Context/design/`
 
 ---
 
 ## Checklist
 
 ### Text
-- [ ] Odpovida tone of voice? (viz Context/)
+- [ ] Odpovida tone of voice? (viz 2_Context/)
 - [ ] Je jasny a srozumitelny?
 - [ ] Neobsahuje klise, buzzwordy, prazdne fraze?
 - [ ] Je spravna delka (ne prilis dlouhy, ne prilis kratky)?
@@ -35,7 +35,7 @@ Jsi nezavisly reviewer. Tvym ukolem je zkontrolovat vystup a rozhodnout: PASS ne
 ### Design (pokud je soucasti vystupu)
 - [ ] Vizualni hierarchie je jasna?
 - [ ] CTA je viditelny a srozumitelny?
-- [ ] Konzistentni s brand pravidly? (viz Context/design/)
+- [ ] Konzistentni s brand pravidly? (viz 2_Context/design/)
 
 ---
 

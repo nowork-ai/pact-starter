@@ -23,7 +23,7 @@
 Skill je slozka obsahujici `SKILL.md` — soubor s metadaty a instrukcemi. Volitelne muze obsahovat skripty, sablony a referencni materialy.
 
 ```
-Agents/skills/
+1_Agents/skills/
 └── muj-skill/
     ├── SKILL.md          ← Povinny: instrukce + metadata
     ├── scripts/          ← Volitelne: spustitelny kod
@@ -52,7 +52,7 @@ Pouzij tento skill kdyz...
 
 ### Krok 1: [nazev]
 1. Udelej X
-2. Nacti Context/identity/tone-of-voice/
+2. Nacti 2_Context/identity/tone-of-voice/
 3. ...
 
 ### Krok 2: [nazev]
@@ -88,7 +88,7 @@ Tento pristup (progressive disclosure) drzi kontext maly, dokud ho neni skutecne
 
 ## Jak vytvorit skill
 
-1. Vytvor slozku: `Agents/skills/[nazev-skillu]/`
+1. Vytvor slozku: `1_Agents/skills/[nazev-skillu]/`
 2. Vytvor `SKILL.md` s YAML frontmatter (`name`, `description`)
 3. Napis instrukce — pipeline, kroky, quality gates
 4. Volitelne pridej `scripts/`, `references/`, `templates/`

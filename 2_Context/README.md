@@ -1,4 +1,4 @@
-# Context/ — KDO to dela
+# 2_Context/ — KDO jsem a co delam
 
 > Tvuj osobni kontext pro AI. Zdroj pravdy o tom, kdo jsi, co vis a kam smerujes.
 
@@ -19,8 +19,8 @@ Agent v projektu odkazuje na Context takto:
 
 ```markdown
 ## Kontext
-Pro tone of voice viz: Context/identity/tone-of-voice/
-Pro info o projektu viz: Context/projects/[nazev].md
+Pro tone of voice viz: 2_Context/identity/tone-of-voice/
+Pro info o projektu viz: 2_Context/projects/[nazev].md
 ```
 
 ## Dulezite

@@ -63,9 +63,9 @@
 
 ### Co dostane (vse z Pro +:)
 - Multi-user PACT setup:
-  - `Context/company/` — firemni context (brand, hodnoty, procesy)
-  - `Context/departments/` — oborove znalosti (HR, finance, marketing, sales)
-  - `Context/team/` — individualni context clenu tymu
+  - `2_Context/company/` — firemni context (brand, hodnoty, procesy)
+  - `2_Context/departments/` — oborove znalosti (HR, finance, marketing, sales)
+  - `2_Context/team/` — individualni context clenu tymu
 - Shared vs Personal kontext separace
 - Team agent registry s departmentalnimi agenty
 - Onboarding kit pro nove cleny tymu

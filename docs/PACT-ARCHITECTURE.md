@@ -12,16 +12,16 @@ Pracovni prostor je rozdeleny do **ctyr zakladnich piliru**, z nichz kazdy odpov
 
 | Pilir | Otazka | Obsah |
 |-------|--------|-------|
-| **Projects** | CO delam? | Aktivni projekty s vystupy |
-| **Agents** | JAK to udelat? | Instrukce pro AI — agenti (.md) a skills (slozky s SKILL.md) |
-| **Context** | KDO to dela? | Identita, styl, expertiza, cile |
-| **Tools** | CIM to udelat? | Nastroje, skripty, API |
+| `0_Projects/` | CO delam? | Aktivni projekty s vystupy |
+| `1_Agents/` | JAK to udelat? | Instrukce pro AI — agenti (.md) a skills (slozky s SKILL.md) |
+| `2_Context/` | KDO jsem a co delam? | Identita, styl, expertiza, cile |
+| `3_Tools/` | CIM to udelat? | Nastroje, skripty, API |
 
 ---
 
 ## Klicove principy
 
-1. **Single Source of Truth** — pravidla ziji na jednom miste (v `Context/`), agenti na ne odkazuji
+1. **Single Source of Truth** — pravidla ziji na jednom miste (v `2_Context/`), agenti na ne odkazuji
 2. **Agent = instrukce pro AI** — markdown soubor nebo skill (slozka s SKILL.md)
 3. **Reference, ne hardcode** — agenti odkazuji na slozky, ne na konkretni soubory
 4. **DRY** — zmena na jednom miste se projevi vsude
@@ -35,12 +35,12 @@ Pracovni prostor je rozdeleny do **ctyr zakladnich piliru**, z nichz kazdy odpov
 Uzivatel: "Zpracuj toto video z podcastu"
     |
     v
-AI cte: Projects/podcast/agent-podcast-processor.md
+AI cte: 0_Projects/podcast/agent-podcast-processor.md
     |
-    +---> Context/identity/tone-of-voice/
+    +---> 2_Context/identity/tone-of-voice/
     |     (pro spravny styl vystupu)
     |
-    +---> Tools/
+    +---> 3_Tools/
     |     (najde potrebne nastroje)
     |
     +---> Vytvori vystupy podle workflow v agentovi
@@ -51,15 +51,15 @@ AI cte: Projects/podcast/agent-podcast-processor.md
 ## Vazby mezi slozkami
 
 ```
-        PROJECTS/
+        0_PROJECTS/
         (aktivni projekty)
             |
      Agent v projektu odkazuje na:
             |
      +------+------+
      |      |      |
-  AGENTS/  TOOLS/ CONTEXT/
-  (JAK)   (CIM)  (KDO)
+ 1_AGENTS/ 3_TOOLS/ 2_CONTEXT/
+  (JAK)    (CIM)    (KDO)
 ```
 
 - **Agent ≠ Tool:** Agent popisuje CO a JAK, tool dela konkretni operaci

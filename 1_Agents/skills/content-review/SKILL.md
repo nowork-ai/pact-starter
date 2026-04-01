@@ -16,14 +16,14 @@ Pouzij tento skill kdyz:
 
 ## Kontext
 
-- `Context/identity/tone-of-voice/` — pravidla pro styl komunikace
-- `Context/identity/about-me.md` — kdo je autor
+- `2_Context/identity/tone-of-voice/` — pravidla pro styl komunikace
+- `2_Context/identity/about-me.md` — kdo je autor
 
 ## Pipeline
 
 ### Krok 1: Nacti kontext
-1. Precti `Context/identity/tone-of-voice/general.md`
-2. Precti `Context/identity/about-me.md`
+1. Precti `2_Context/identity/tone-of-voice/general.md`
+2. Precti `2_Context/identity/about-me.md`
 3. Zapamatuj si klicove vzorce (formalita, typicke fraze, co nepouzivat)
 
 ### Krok 2: Analyzuj text

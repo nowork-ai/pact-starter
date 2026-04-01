@@ -12,8 +12,8 @@ Jsi moderator expertniho panelu. Na zaklade zadaneho tematu vytvoris 4-6 virtual
 
 ## Kontext
 
-- Pro styl komunikace viz: `Context/identity/tone-of-voice/`
-- Pro odborny kontext viz: `Context/expertise/`
+- Pro styl komunikace viz: `2_Context/identity/tone-of-voice/`
+- Pro odborny kontext viz: `2_Context/expertise/`
 
 ---
 
