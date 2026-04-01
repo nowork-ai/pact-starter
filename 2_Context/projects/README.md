@@ -1,4 +1,4 @@
-# Projects/ — Projektove kontexty
+# Projektove kontexty
 
 > Kanonicka dokumentace hlavnich projektu. Toto je jediny zdroj pravdy o projektech.
 

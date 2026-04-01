@@ -40,12 +40,19 @@ Ctyri slozky, ctyri otazky:
 ```
 pact-starter/
 ├── START-HERE.md                  ← Zacni tady
-├── .cursorrules                   ← Pravidla pro Cursor AI
+├── .cursorrules                   ← Pravidla pro Cursor AI (trigger mapping pro 12 agentu)
 ├── 0_Projects/                    ← Tvoje projekty
-├── 1_Agents/                      ← AI agenti a skills
-│   ├── agent-prompt-architect.md
-│   ├── agent-expert-panel.md
-│   └── agent-quality-gate.md
+├── 1_Agents/                      ← AI agenti a skills (12 agentu)
+│   ├── AGENT-REGISTRY.md          ← Prehled vsech agentu + pravidla pro tvorbu
+│   ├── RECIPES.md                 ← 7 workflow retezu (jak kombinovat agenty)
+│   ├── agent-prompt-architect.md  ← Vytvari prompty a dalsi agenty
+│   ├── agent-expert-panel.md      ← Simuluje diskuzi 3-5 real. expertu
+│   ├── agent-deep-researcher.md   ← Hloubkovy vyzkum s citacemi
+│   ├── agent-data-analyst.md      ← Analyza dat (chunking, map-reduce)
+│   ├── agent-product-architect.md ← Z napadu → PRD + Developer Brief
+│   ├── agent-quality-gate.md      ← PASS/FAIL kontrola vystupu
+│   ├── ...a dalsi                 ← Viz AGENT-REGISTRY.md
+│   └── skills/                    ← Skills (slozky s SKILL.md)
 ├── 2_Context/                     ← Tvuj kontext
 │   ├── identity/about-me.md
 │   ├── identity/tone-of-voice/
@@ -55,6 +62,9 @@ pact-starter/
 │   ├── api/                       ← API klice + navod
 │   └── README.md                  ← Roadmapa nastroju
 └── docs/                          ← Dokumentace
+    ├── MUJ-PRVNI-AGENT.md         ← Tutorial: jak vytvorit agenta
+    ├── PACT-ARCHITECTURE.md       ← Architektura systemu
+    └── PACT-ZA-5-MINUT.md         ← Rychly prehled
 ```
 
 ---
@@ -70,6 +80,9 @@ pact-starter/
 
 ## Dalsi materialy
 
+- `1_Agents/AGENT-REGISTRY.md` — prehled vsech 12 agentu s popisy
+- `1_Agents/RECIPES.md` — 7 workflow retezu (jak kombinovat agenty)
+- `docs/MUJ-PRVNI-AGENT.md` — tutorial: jak vytvorit vlastniho agenta za 15 minut
 - `docs/PACT-ZA-5-MINUT.md` — rychly pruvodce
 - `docs/PACT-ARCHITECTURE.md` — architektura frameworku
 - `1_Agents/skills/README.md` — skills = strukturovane workflow (otevreny standard [agentskills.io](https://agentskills.io))

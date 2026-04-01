@@ -190,51 +190,51 @@ ktery bude slouzit jako vstup pro dalsi agenty (napr. @agent-product-architect.m
 
 ## Příklad výstupu
 
-Pro složku obsahující materiály k eventu "AI Predictions 2026":
+Pro slozku obsahujici materialy k projektu "Product Launch Q2":
 
 ```markdown
-# 📁 AI Predictions 2026 — Kontextový dokument
+# 📁 Product Launch Q2 — Kontextovy dokument
 
-**Automaticky vygenerováno:** 5. prosince 2025
-**Zdrojová složka:** /Projects/ai-predictions-2026/
+**Automaticky vygenerovano:** 15. brezna 2026
+**Zdrojova slozka:** /0_Projects/product-launch-q2/
 
 ---
 
 ## 🎯 O projektu
 
-Tech konference o budoucnosti práce s umělou inteligencí. 
-Cílem je poskytnout praktické, reálné informace bez buzzwordů.
+Launch noveho SaaS produktu pro male a stredni firmy.
+Cilem je ziskat prvnich 100 platících zakazniku do konce cervna.
 
-**Cílová skupina:** Manažeři, lídři, profesionálové zajímající se o AI
-**Typ projektu:** Hybridní event (Praha + online)
+**Cilova skupina:** Majitele malych firem, freelanceri, marketeri
+**Typ projektu:** Product launch (web + kampane + onboarding)
 
 ---
 
-## 📅 Klíčová data a fakta
+## 📅 Klicova data a fakta
 
 | Informace | Hodnota |
 |-----------|---------|
-| Datum | 21. ledna 2026 |
-| Čas | 15:00 – 17:00 |
-| Místo | Praha + online stream |
-| Charita | Výtěžek jde na Sdružení DIGIVIA |
-| Cena | Od 990 Kč |
+| Launch datum | 15. dubna 2026 |
+| Beta | 1.–14. dubna (50 uzivatelu) |
+| Cilova skupina | SMB, 10-50 zamestnancu |
+| Pricing | Od $29/mesic |
+| Cil | 100 platících zakazniku do 30. 6. |
 
 ---
 
 ## 🗣️ Tone of Voice
 
-Inspirativní, praktický, bez buzzwordů. Jako chytrý kolega, ne marketing.
+Prakticky, primy, bez buzzwordu. Jako chytry kolega, ne marketing.
 
-### Používat:
-- "Reálná praxe, reálné výsledky"
-- "Žádné buzzwordy. Žádné teorie."
-- Konkrétní čísla a příklady
+### Pouzivat:
+- "Usetri cas, ne penize"
+- Konkretni cisla a priklady
+- Primy osloveni "ty"
 
-### Nepoužívat:
-- "Revoluční", "unikátní", "exkluzivní"
-- "AI transformace", "digitální transformace"
-- Anglicismy (cutting-edge, state-of-the-art)
+### Nepouzivat:
+- "Revolucni", "unikatni", "exkluzivni"
+- "AI transformace", "digitalni transformace"
+- Pasivni konstrukce
 
 [... zbytek dokumentu ...]
 ```

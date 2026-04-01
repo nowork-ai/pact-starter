@@ -71,18 +71,19 @@ Jeden klic = pristup ke stovkam AI modelu (Claude, GPT, Gemini, Llama...).
 
 ---
 
-## Krok 4: Pridej jednoho agenta (1 minuta)
+## Krok 4: Pouzij hotove agenty nebo vytvor vlastniho (1 minuta)
 
-V `1_Agents/` uz mas `agent-prompt-architect.md`. Rekni AI:
+V `1_Agents/` mas **12 hotovych agentu**. Pouzij je rovnou:
+
+> "Pouzij agent-expert-panel na tema: jak nastavit pricing"
+> "Pouzij agent-deep-researcher a prozkoumej [tema]"
+> "Pouzij agent-data-analyst a analyzuj tuhle tabulku"
+
+Nebo si vytvor vlastniho — viz tutorial `docs/MUJ-PRVNI-AGENT.md`:
 
 > "Precti si 1_Agents/agent-prompt-architect.md a vytvor mi agenta na [tvuj ukol]"
 
-Napr.:
-- "...agenta na psani LinkedIn postu"
-- "...agenta na analyzu konkurence"
-- "...agenta na zpracovani schuzek"
-
-AI vytvori agenta, ktery zna tvuj styl (protoze cte 2_Context/). Kdyz agent roste na slozitosti, upgradni ho na **skill** (slozka s SKILL.md).
+Prehled vsech agentu: `1_Agents/AGENT-REGISTRY.md`
 
 ---
 
@@ -107,8 +108,11 @@ Rekni AI: "Pracuj na projektu v 0_Projects/muj-prvni-projekt/"
 | Noveho agenta | "Pouzij agent-prompt-architect a vytvor agenta na [X]" |
 | Text v mem stylu | "Napis [X], pouzij 2_Context/identity/tone-of-voice/" |
 | Expertni pohled | "Pouzij agent-expert-panel na tema [X]" |
-| Zkontrolovat vystup | "Pouzij agent-quality-gate a zkontroluj [X]" |
-| Novy nastroj | "Mrkni na 3_Tools/README.md a vytvor mi nastroj na [X]" |
+| Hloubkovy vyzkum | "Prozkoumej [tema]" (aktivuje agent-deep-researcher) |
+| Analyzu dat | "Analyzuj tyhle dokumenty" (aktivuje agent-data-analyst) |
+| Specifikaci produktu | "Mam napad na [X]" (aktivuje agent-product-architect) |
+| Zkontrolovat vystup | "Zkontroluj toto" (aktivuje agent-quality-gate) |
+| Kombinovat agenty | "Pouzij recept [nazev]" (viz 1_Agents/RECIPES.md) |
 
 ### Prubezne vylepsuj:
 
@@ -130,7 +134,7 @@ Rekni AI: "Pracuj na projektu v 0_Projects/muj-prvni-projekt/"
 
 ## Nejcastejsi chyby
 
-1. **Prazdny Context/** — AI pak generuje genericky obsah. Vyplň alespon about-me a tone-of-voice.
+1. **Prazdny 2_Context/** — AI pak generuje genericky obsah. Vypln alespon about-me a tone-of-voice.
 2. **Prilis obecni agenti** — Cim konkretnejsi agent, tim lepsi vystup. "Napis email" < "Napis follow-up email po workshopu, kratky, pratelsky ton".
 3. **Zapominani aktualizovat** — Context je zivy dokument. Aktualizuj ho s novym obsahem.
 
@@ -138,6 +142,9 @@ Rekni AI: "Pracuj na projektu v 0_Projects/muj-prvni-projekt/"
 
 ## Dalsi kroky
 
+- Prozkoumej **12 hotovych agentu** — viz `1_Agents/AGENT-REGISTRY.md`
+- Zkus **workflow recepty** (retezeni agentu) — viz `1_Agents/RECIPES.md`
+- Vytvor **vlastniho agenta** — viz tutorial `docs/MUJ-PRVNI-AGENT.md`
 - Pridej **Skills** (strukturovane workflow dle [agentskills.io](https://agentskills.io)) — viz `1_Agents/skills/README.md`
 - Vytvor **projektove kontexty** — viz `2_Context/projects/`
 - Pridej **Tools** — viz roadmapu v `3_Tools/README.md`

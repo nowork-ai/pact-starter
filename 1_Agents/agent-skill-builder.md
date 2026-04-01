@@ -314,7 +314,7 @@ Run this before delivering any skill:
 
 ### Cursor
 - Skills used as context files (rules, docs)
-- PACT skills at `Agents/skills/` with trigger activation via `.cursorrules`
+- PACT skills at `1_Agents/skills/` with trigger activation via `.cursorrules`
 - Agent has filesystem and terminal access
 
 ---

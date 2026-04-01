@@ -1,0 +1,17 @@
+# API klice — NIKDY necommitovat
+3_Tools/api/*.txt
+3_Tools/api/*.key
+3_Tools/api/.env
+.env
+.env.*
+
+# System
+.DS_Store
+Thumbs.db
+
+# Archivy
+*.zip
+
+# IDE
+.vscode/
+.idea/
