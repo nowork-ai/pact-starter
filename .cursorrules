@@ -1,0 +1,100 @@
+# PACT Workspace Rules
+
+## Architektura
+
+Tento workspace pouziva PACT strukturu:
+- **P**rojects/ — Aktivni projekty s vystupy
+- **A**gents/ — AI agenti (.md) a skills (slozky s SKILL.md) — instrukce a workflow
+- **C**ontext/ — Identita, tone of voice, expertiza, cile
+- **T**ools/ — Skripty, API integrace, utility
+
+## Pravidla pro AI
+
+1. Pri psani textu VZDY nacti `Context/identity/tone-of-voice/` pro spravny styl
+2. Pri tvorbe agenta/skillu pouzij `Agents/agent-prompt-architect.md` (agent) nebo `Agents/skills/README.md` (skill)
+3. Vystupy ukladej do prislusneho projektu v `Projects/`
+4. Nastroje hledej v `Tools/`
+5. Pro kontext a referenci viz `Context/`
+
+## Klicove cesty
+
+| Ucel | Cesta |
+|------|-------|
+| Agenti a skills | `Agents/` (agenti = .md, skills = slozky s SKILL.md) |
+| Tone of voice | `Context/identity/tone-of-voice/` |
+| Cile | `Context/goals/` |
+| Nastroje | `Tools/` |
+
+---
+
+## Workshop Setup Mode
+
+Kdyz uzivatel rekne "setup", "nastav PACT", "pomoz mi nastavit", "start", "zacni", nebo "chci si nastavit PACT", spust nasledujici interaktivni proces.
+
+Komunikuj cesky, pratelsky, strucne. Pouzivej osloveni "ty".
+
+### Postup (5 kroku)
+
+**KROK 1 — Kdo jsi**
+
+1. Precti soubor `Context/identity/about-me.md`
+2. Pokud obsahuje `[PLACEHOLDER]` nebo `[DOPLNIT]`, zeptej se uzivatele:
+   - "Jak se jmenujes a co delas? (role, firma, obor)"
+   - "Co je tvoje hlavni zamereni? (2-3 vety)"
+   - "S kym pracujes / pro koho tvoris?"
+3. Odpovedi zapis do `about-me.md` — nahrad vsechny placeholdery skutecnymi udaji
+4. Rekni: "Hotovo — tvuj profil je nastaveny. Jedeme dal."
+
+**KROK 2 — Jak komunikujes**
+
+1. Precti soubor `Context/identity/tone-of-voice/general.md`
+2. Pokud obsahuje `[PLACEHOLDER]` nebo `[DOPLNIT]`, zeptej se uzivatele:
+   - "Jak pises? Spis formalne nebo neformalne?"
+   - "Jake fraze nebo slova typicky pouzivas?"
+   - "Co NEPOUZIVAS? (klise, emoji, urcite obraty)"
+   - "Mas priklad textu ve tvem stylu? (email, post, zprava — cokoliv)"
+3. Odpovedi zapis do `general.md`
+4. Rekni: "Super — tvuj styl komunikace je ulozeny."
+
+**KROK 3 — Tvoje cile**
+
+1. Precti soubor `Context/goals/goals.md`
+2. Pokud obsahuje `[PLACEHOLDER]` nebo `[DOPLNIT]`, zeptej se uzivatele:
+   - "Na cem ted pracujes? Jake mas nejblizsi cile?"
+   - "Co chces dosahnout do konce roku?"
+3. Odpovedi zapis do `goals.md`
+4. Rekni: "Cile nastavene."
+
+**KROK 4 — Prvni agent**
+
+1. Rekni: "Ted ti vytvorim prvniho agenta na miru. Na co potrebujes pomoc? Napr.:"
+   - "Psani emailu"
+   - "Analyza dokumentu"
+   - "Tvorba obsahu pro socialni site"
+   - "Zpracovani schuzek"
+   - "Neco jineho?"
+2. Precti `Agents/agent-prompt-architect.md` a podle nej vytvor noveho agenta
+3. Noveho agenta uloz do `Agents/` s nazvem `agent-[tema].md`
+4. Zaregistruj ho v `Agents/AGENT-REGISTRY.md`
+5. Rekni: "Agent vytvoren! Najdes ho v Agents/agent-[tema].md"
+
+**KROK 5 — Prvni projekt**
+
+1. Zeptej se: "Na jakem projektu ted pracujes? Jak se jmenuje?"
+2. Vytvor slozku `Projects/[nazev-projektu]/`
+3. Vytvor v ni `README.md` s popisem projektu a cilem
+4. Rekni: "Projekt pripraven. Muzes do nej pridat vstupni materialy a zacit pracovat."
+
+### Po dokonceni vsech kroku
+
+Rekni uzivateli:
+- "PACT je nastaveny! Tady je shrnutí:"
+- Vypis co je vyplnene (profil, styl, cile, agent, projekt)
+- "Od ted muzes rikat napr.: 'Napis email v mem stylu' nebo 'Pouzij agent-[tema] na [ukol]' a ja budu cekat tvuj kontext."
+
+### Dulezite
+
+- Pokud uzivatel nechce nektery krok, preskoc ho
+- Nemusí vyplnit vse najednou — kazdy krok funguje samostatne
+- Pri psani do souboru zachovej strukturu sablony, jen nahrad placeholdery
+- Neptej se na vsechno najednou — vzdy max 2-3 otazky, pak zapis a pokracuj
