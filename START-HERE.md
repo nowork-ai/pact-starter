@@ -65,9 +65,23 @@ Projdi kroky nize rucne a vyplň sablony.
 - [ ] AI vytvori agenta a ulozi ho do `1_Agents/`
 
 ### Krok 6: Prvni projekt
-- [ ] Vytvor slozku `0_Projects/nazev-projektu/`
-- [ ] Pridej `README.md` s popisem a cilem
-- [ ] Zacni pracovat — rekni AI co potrebujes
+
+Nejjednodussi: rekni AI **„zaloz projekt [nazev]"** — spusti se `agent-pact-bootstrap.md`, ktery vytvori kompletni strukturu z `0_Projects/_template/`:
+
+```
+0_Projects/[nazev]/
+├── README.md                              ← Lidsky popis projektu
+├── AGENTS.md                              ← Briefing pro AI (multi-tool standard)
+├── .cursor/rules/parent-context.mdc       ← Auto-load Cursor pravidlo
+├── inputs/                                ← Vstupni materialy
+└── outputs/                               ← Hotove vystupy
+```
+
+**Proc takhle:** Diky `AGENTS.md` + `.cursor/rules/parent-context.mdc` v projektove slozce pozna agent PACT i kdyz pak otevres jen tu projektovou podslozku v Cursoru/Claude Code. Bude vedet o tone-of-voice, dostupnych agentech a Tools, i kdyz nema vidi root workspace.
+
+**Alternativy:**
+- Pres skript: `python3 3_Tools/workflows/generate-agents-md.py --init [nazev]`
+- Manualne: `cp -R 0_Projects/_template/ 0_Projects/[nazev]/` a nahrad placeholdery
 
 ---
 
@@ -91,11 +105,15 @@ Po nastaveni zkus napr.:
 ```
 pact-starter/
 ├── START-HERE.md                  ← Jsi tady
-├── .cursorrules                   ← Pravidla pro Cursor AI
+├── AGENTS.md                      ← Agent briefing (multi-tool standard)
+├── .cursor/rules/pact.mdc         ← Cursor pravidla (alwaysApply)
+├── .cursorrules                   ← Legacy pointer pro starsi Cursor
 ├── 0_Projects/                    ← Tvoje projekty
+│   └── _template/                 ← Sablona pro nove projekty
 ├── 1_Agents/                      ← AI agenti a skills
-│   ├── AGENT-REGISTRY.md          ← Prehled vsech 12 agentu
+│   ├── AGENT-REGISTRY.md          ← Prehled vsech 13 agentu
 │   ├── RECIPES.md                 ← Workflow recepty (jak retezit agenty)
+│   ├── agent-pact-bootstrap.md    ← Zaklada nove projekty
 │   ├── agent-prompt-architect.md  ← Vytvari prompty a dalsi agenty
 │   ├── agent-expert-panel.md      ← Expertni diskuze (3-5 real. expertu)
 │   ├── agent-deep-researcher.md   ← Hloubkovy vyzkum s citacemi
@@ -111,6 +129,7 @@ pact-starter/
 │   └── expertise/                 ← Tvoje znalosti
 ├── 3_Tools/                       ← Nastroje
 │   ├── api/                       ← API klice + navod
+│   ├── workflows/                 ← Workflow skripty (generate-agents-md.py)
 │   └── README.md                  ← Roadmapa nastroju
 └── docs/                          ← Dokumentace
     ├── MUJ-PRVNI-AGENT.md         ← Tutorial: jak vytvorit agenta

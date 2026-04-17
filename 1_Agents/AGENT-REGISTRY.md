@@ -44,6 +44,7 @@ Staci AI rict: **"Pouzij agenta [nazev]"** a ukazu na soubor. AI si precte instr
 
 | Agent | Co dela | Kdy pouzit |
 |-------|---------|------------|
+| **[agent-pact-bootstrap.md](agent-pact-bootstrap.md)** | Zaklada novy projekt v `0_Projects/` z `_template/` — vcetne `AGENTS.md` a `.cursor/rules/parent-context.mdc` aby agent fungoval i kdyz user otevre jen tu podslozku | Kdyz user rekne "zaloz projekt", "novy projekt", "vytvor projekt" |
 | **[agent-product-architect.md](agent-product-architect.md)** | Transformuje vagne napady na kompletni PRD + Developer Brief | Kdyz mas napad na produkt a chces z nej udelat specifikaci pripravenou pro vyvojare |
 | **[agent-context-builder.md](agent-context-builder.md)** | Prozkouma projektovou slozku a vytvori strukturovany kontextovy dokument | Kdyz mas slozku plnou souboru a chces z ni jeden uceleny dokument pro dalsi praci |
 | **[agent-quality-gate.md](agent-quality-gate.md)** | Finalni kontrola vystupu — text, kod, design — s verdiktem PASS/FAIL | Na konci kazdeho workflow — kdyz chces nezavisly review vystupu pred odevzdanim |

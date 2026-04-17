@@ -1,0 +1,142 @@
+---
+description: PACT workspace — architektura, agent triggery a setup mode
+alwaysApply: true
+---
+
+# PACT Workspace Rules
+
+> **Tento workspace používá [PACT framework](https://github.com/drimalka/pact-starter).** Pro kompletní agent briefing viz `AGENTS.md` v rootu.
+
+## Architektura
+
+| Pilíř | Složka | Otázka |
+|---|---|---|
+| **P**rojects | `0_Projects/` | CO dělám? |
+| **A**gents | `1_Agents/` | JAK to udělat? (agenti `.md`, skills s `SKILL.md`) |
+| **C**ontext | `2_Context/` | KDO jsem? (identita, tone of voice, cíle) |
+| **T**ools | `3_Tools/` | ČÍM to udělat? (skripty, API) |
+
+## Pravidla pro AI
+
+1. Při psaní textu pro usera **vždy** načti `2_Context/identity/tone-of-voice/general.md`
+2. Pro tvorbu agenta použij `1_Agents/agent-prompt-architect.md`, pro skill `1_Agents/agent-skill-builder.md`
+3. Pro zakládání nového projektu použij `1_Agents/agent-pact-bootstrap.md` (kopíruje `0_Projects/_template/`)
+4. Výstupy ukládej do `0_Projects/<nazev>/outputs/`, ne do rootu
+5. Sdílené utility patří do `3_Tools/`, ne do projektu
+6. Pro recepty workflow viz `1_Agents/RECIPES.md`
+7. Pro tutorial „Můj první agent" viz `docs/MUJ-PRVNI-AGENT.md`
+
+---
+
+## Aktivace agentů (trigger mapping)
+
+Když user řekne něco z triggerů, automaticky načti příslušného agenta a řiď se jeho instrukcemi.
+
+| Trigger | Agent | Co dělá |
+|---|---|---|
+| „vytvor prompt", „napis prompt", „prompt pro AI", „system prompt" | `1_Agents/agent-prompt-architect.md` | Vytvoří precizní prompt pro LLM |
+| „expert panel", „diskuze expertu", „vice uhlu pohledu", „co by rekli experti" | `1_Agents/agent-expert-panel.md` | Simuluje diskuzi 3–5 reálných expertů |
+| „zkontroluj", „review", „quality gate", „je to dobre?", „zkontroluj vystup" | `1_Agents/agent-quality-gate.md` | Finální PASS/FAIL kontrola výstupu |
+| „prozkoumej", „vyzkum", „research", „najdi informace", „zjisti" | `1_Agents/agent-deep-researcher.md` | Hloubkový výzkum s citacemi |
+| „analyzuj data", „analyzuj dokumenty", „zpracuj tabulku", „analyzuj CSV" | `1_Agents/agent-data-analyst.md` | Analýza velkých dat (chunking, map-reduce) |
+| „prozkoumej slozku", „kontextovy dokument", „co je v teto slozce" | `1_Agents/agent-context-builder.md` | Vytvoří kontextový dokument ze složky |
+| „analyzuj muj styl", „tone of voice", „jak pisu", „personal brand" | `1_Agents/agent-personal-voice-analyst.md` | Analýza komunikačního stylu |
+| „extrahuj znalosti", „vytvor agenta z dokumentu", „knowledge base" | `1_Agents/agent-knowledge-extractor.md` | Extrakce znalostí → agent prompt |
+| „specifikace produktu", „PRD", „napad na produkt", „chci postavit" | `1_Agents/agent-product-architect.md` | Z nápadu vytvoří PRD + Developer Brief |
+| „vytvor skill", „novy skill", „SKILL.md", „postav skill" | `1_Agents/agent-skill-builder.md` | Vytvoří `SKILL.md` |
+| „preved do HTML", „markdown to HTML", „udelej HTML", „publikuj dokument" | `1_Agents/agent-markdown-to-html.md` | Konvertuje Markdown na HTML |
+| **„zaloz projekt", „novy projekt", „start project", „vytvor projekt"** | `1_Agents/agent-pact-bootstrap.md` | Vytvoří strukturu projektu z `_template/` |
+| „claude code", „jak pouzit claude", „instalace claude", „claude pomoc" | `1_Agents/agent-claude-code-guide.md` | Průvodce Claude Code |
+| „recept", „workflow", „jak kombinovat agenty", „retezit agenty" | `1_Agents/RECIPES.md` | Workflow řetězy |
+| „muj prvni agent", „jak vytvorit agenta", „tutorial agent" | `docs/MUJ-PRVNI-AGENT.md` | Tutorial tvorby agenta |
+
+---
+
+## Klíčové cesty
+
+| Účel | Cesta |
+|---|---|
+| Projekty | `0_Projects/` |
+| Šablona nového projektu | `0_Projects/_template/` |
+| Agenti a skills | `1_Agents/` |
+| Kontext a identita | `2_Context/` |
+| Tone of voice | `2_Context/identity/tone-of-voice/` |
+| Cíle | `2_Context/goals/` |
+| Nástroje | `3_Tools/` |
+| API klíče (gitignored) | `3_Tools/api/` |
+| Workflow skripty | `3_Tools/workflows/` |
+
+---
+
+## Workshop Setup Mode
+
+Když user řekne „setup", „nastav PACT", „pomoz mi nastavit", „start", „zacni", nebo „chci si nastavit PACT", spusť následující interaktivní proces.
+
+Komunikuj česky, přátelsky, stručně. Používej oslovení „ty".
+
+### Postup (6 kroků)
+
+**KROK 1 — Kdo jsi**
+
+1. Přečti soubor `2_Context/identity/about-me.md`
+2. Pokud obsahuje `[PLACEHOLDER]` nebo `[DOPLNIT]`, zeptej se usera:
+   - „Jak se jmenuješ a co děláš? (role, firma, obor)"
+   - „Co je tvoje hlavní zaměření? (2–3 věty)"
+   - „S kým pracuješ / pro koho tvoříš?"
+3. Odpovědi zapiš do `about-me.md` — nahraď všechny placeholdery skutečnými údaji
+4. Řekni: „Hotovo — tvůj profil je nastavený. Jedeme dál."
+
+**KROK 2 — Jak komunikuješ**
+
+1. Přečti soubor `2_Context/identity/tone-of-voice/general.md`
+2. Pokud obsahuje `[PLACEHOLDER]` nebo `[DOPLNIT]`, zeptej se:
+   - „Jak píšeš? Spíš formálně nebo neformálně?"
+   - „Jaké fráze nebo slova typicky používáš?"
+   - „Co NEPOUŽÍVÁŠ? (klišé, emoji, určité obraty)"
+   - „Máš příklad textu ve tvém stylu?"
+3. Odpovědi zapiš do `general.md`
+4. Řekni: „Super — tvůj styl komunikace je uložený."
+
+**KROK 3 — Tvoje cíle**
+
+1. Přečti `2_Context/goals/goals.md`
+2. Pokud má placeholdery, zeptej se:
+   - „Na čem teď pracuješ? Jaké máš nejbližší cíle?"
+   - „Co chceš dosáhnout do konce roku?"
+3. Zapiš do `goals.md`
+4. Řekni: „Cíle nastavené."
+
+**KROK 4 — API klíče**
+
+1. Řekni: „Pro používání AI nástrojů budeš potřebovat API klíč. Nejjednodušší start je OpenRouter — jeden klíč, stovky modelů."
+2. Odkaž usera na `3_Tools/api/README.md`
+3. Pokud klíč už má, pokračuj. Pokud ne, nech ho to nastavit a vrať se.
+
+**KROK 5 — První agent**
+
+1. Řekni: „Teď ti vytvořím prvního agenta na míru. Na co potřebuješ pomoc?"
+2. Přečti `1_Agents/agent-prompt-architect.md` a podle něj vytvoř nového agenta
+3. Ulož do `1_Agents/` s názvem `agent-[téma].md`
+4. Zaregistruj v `1_Agents/AGENT-REGISTRY.md`
+5. Řekni: „Agent vytvořen! Najdeš ho v `1_Agents/agent-[téma].md`"
+
+**KROK 6 — První projekt**
+
+1. Použij `1_Agents/agent-pact-bootstrap.md` — automaticky vytvoří strukturu z `_template/` včetně `AGENTS.md` a `.cursor/rules/parent-context.mdc`
+2. Zeptej se na název projektu, krátký popis, případně deadline
+3. Vytvoří `0_Projects/<nazev>/` se vším potřebným
+4. Řekni: „Projekt připraven. Můžeš do něj přidat vstupní materiály a začít pracovat."
+
+### Po dokončení všech kroků
+
+Řekni:
+- „PACT je nastavený! Tady je shrnutí:"
+- Vypiš co je vyplněné (profil, styl, cíle, API klíče, agent, projekt)
+- „Od teď můžeš říkat např.: ‚Napiš email v mém stylu' nebo ‚Použij agent-[téma] na [úkol]' a já budu znát tvůj kontext."
+
+### Důležité
+
+- Pokud user nechce některý krok, přeskoč ho
+- Nemusí vyplnit vše najednou — každý krok funguje samostatně
+- Při psaní do souborů zachovej strukturu šablony, jen nahraď placeholdery
+- Neptej se na všechno najednou — vždy max 2–3 otázky, pak zapiš a pokračuj
