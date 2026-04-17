@@ -40,11 +40,16 @@ Ctyri slozky, ctyri otazky:
 ```
 pact-starter/
 ├── START-HERE.md                  ← Zacni tady
-├── .cursorrules                   ← Pravidla pro Cursor AI (trigger mapping pro 12 agentu)
+├── AGENTS.md                      ← Agent briefing (multi-tool: Cursor, Claude Code, Codex, Cline...)
+├── .cursor/rules/pact.mdc         ← Cursor pravidla (alwaysApply: true) — moderni format
+├── .cursorrules                   ← Legacy fallback pro starsi Cursor (pointer na AGENTS.md)
 ├── 0_Projects/                    ← Tvoje projekty
-├── 1_Agents/                      ← AI agenti a skills (12 agentu)
+│   ├── _template/                 ← Sablona noveho projektu (README, AGENTS.md, .cursor/rules)
+│   └── README.md                  ← Jak zalozit novy projekt
+├── 1_Agents/                      ← AI agenti a skills (13 agentu)
 │   ├── AGENT-REGISTRY.md          ← Prehled vsech agentu + pravidla pro tvorbu
 │   ├── RECIPES.md                 ← 7 workflow retezu (jak kombinovat agenty)
+│   ├── agent-pact-bootstrap.md    ← Zaklada nove projekty z _template/
 │   ├── agent-prompt-architect.md  ← Vytvari prompty a dalsi agenty
 │   ├── agent-expert-panel.md      ← Simuluje diskuzi 3-5 real. expertu
 │   ├── agent-deep-researcher.md   ← Hloubkovy vyzkum s citacemi
@@ -60,6 +65,7 @@ pact-starter/
 │   └── expertise/
 ├── 3_Tools/                       ← Nastroje
 │   ├── api/                       ← API klice + navod
+│   ├── workflows/                 ← Workflow skripty (vc. generate-agents-md.py)
 │   └── README.md                  ← Roadmapa nastroju
 └── docs/                          ← Dokumentace
     ├── MUJ-PRVNI-AGENT.md         ← Tutorial: jak vytvorit agenta
@@ -80,8 +86,11 @@ pact-starter/
 
 ## Dalsi materialy
 
-- `1_Agents/AGENT-REGISTRY.md` — prehled vsech 12 agentu s popisy
+- `AGENTS.md` — multi-tool agent briefing ([agentmd.com](https://agentmd.com) standard)
+- `1_Agents/AGENT-REGISTRY.md` — prehled vsech 13 agentu s popisy
 - `1_Agents/RECIPES.md` — 7 workflow retezu (jak kombinovat agenty)
+- `0_Projects/README.md` — jak zalozit novy projekt (3 zpusoby)
+- `3_Tools/workflows/README.md` — workflow skripty (vc. generate-agents-md.py)
 - `docs/MUJ-PRVNI-AGENT.md` — tutorial: jak vytvorit vlastniho agenta za 15 minut
 - `docs/PACT-ZA-5-MINUT.md` — rychly pruvodce
 - `docs/PACT-ARCHITECTURE.md` — architektura frameworku

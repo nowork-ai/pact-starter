@@ -1,0 +1,31 @@
+---
+description: PACT workspace kontext — automaticky aplikováno v projektu {{PROJECT_NAME}}
+alwaysApply: true
+---
+
+# Jsi v sub-projektu PACT workspace
+
+**Workspace root:** `../../` (relativně z této složky)
+**Tento projekt:** `0_Projects/{{PROJECT_NAME}}/`
+
+I když je v editoru otevřená jen tato podsložka, **vždy** pracuj s vědomím nadřazené struktury:
+
+- **`../../2_Context/identity/`** — kdo je user (`about-me.md`) a jak píše (`tone-of-voice/general.md`). **Vždy** použij pro texty určené userovi nebo jeho jménem.
+- **`../../1_Agents/`** — `AGENT-REGISTRY.md` má přehled. Pro běžné úkoly:
+  - `agent-prompt-architect.md` — tvorba promptů
+  - `agent-expert-panel.md` — diskuze expertů
+  - `agent-deep-researcher.md` — research
+  - `agent-data-analyst.md` — analýza dat
+  - `agent-quality-gate.md` — kontrola výstupu
+  - `agent-product-architect.md` — PRD
+- **`../../3_Tools/`** — hotové skripty a API klienti. Než něco napíšeš od nuly, podívej se sem.
+
+## Pravidla
+
+1. Výstupy projektu patří do `outputs/`, ne do rootu workspace.
+2. Sdílené utility, API klienti a znovu-použitelné skripty patří do `../../3_Tools/`, ne do tohoto projektu.
+3. Texty pro usera **vždy** přes tone-of-voice z `../../2_Context/identity/tone-of-voice/general.md`.
+
+## Kompletní briefing
+
+Detailní mapa cest a interpretace requestů: viz [`AGENTS.md`](../../AGENTS.md) v kořeni tohoto projektu, nebo [`AGENTS.md`](../../../AGENTS.md) v rootu workspace.
