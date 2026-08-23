@@ -1,94 +1,174 @@
-# PACT — AI Workspace Framework
+# PACT: Superpowered OS
 
-> **P**rojects · **A**gents · **C**ontext · **T**ools
+**Rámec pro vytvoření vlastního operačního systému pro Superpowered
+Professionals™ (znalostní pracovníky, kteří chtějí využívat umělou inteligenci
+naplno).**
 
-Framework pro organizaci pracovniho prostoru pro efektivni spolupraci cloveka a AI.
+PACT propojuje projekty, pracovní pravidla, znalosti a nástroje. AI díky tomu
+rozumí tomu, na čem pracujete, dokáže bezpečně pokračovat a neztrácí důležitý
+kontext mezi jednotlivými chaty, agenty a aplikacemi.
 
----
+## Co vám vlastní PACT přinese
 
-## Jak zacit
+- **Budujete si druhý mozek.** Znalosti, rozhodnutí, projekty a zkušenosti
+  nezůstávají rozptýlené v chatech a poznámkách. Postupně vzniká dokumentovaný
+  systém, který roste spolu s vaší prací.
+- **Vy i AI najdete potřebné informace během několika vteřin.** Každý projekt,
+  úkol a typ znalosti má svoje místo, takže nemusíte znovu hledat nebo
+  vysvětlovat celý kontext.
+- **AI vám dává stále lepší výstupy.** Pracuje s vašimi pravidly, ověřenými
+  zdroji, předchozími rozhodnutími a zkušenostmi z dokončené práce.
+- **Můžete plynule pokračovat napříč nástroji.** Práci převezme jiný agent,
+  aplikace nebo člověk, aniž by začínal od nuly.
+- **Systém se zlepšuje s každým projektem.** Výsledky ukazují, které postupy se
+  vyplatí zachovat, co je potřeba opravit a kterou opakovanou práci lze převést
+  na workflow nebo automatizaci.
 
-**Otevri tuto slozku v Cursoru** a podivej se na `START-HERE.md`.
+> **Stav veřejné verze:** Tento repozitář nyní slouží jako veřejný přehled nové
+> generace PACTu. Plnou verzi dostanou jako první k dispozici účastníci
+> [Future AI Leader](https://drimalka.com/fail) a během programu si ji nastaví
+> podle vlastní práce. Jednodušší veřejný starter připravíme podle zkušeností z
+> programu. [Původní PACT Starter](START-HERE.md) zůstane dostupný jako legacy
+> release a samostatná větev.
 
-Nebo rovnou otevri chat (Cmd+L) a napis:
+## Čtyři vrstvy PACTu
 
+PACT je zkratka pro Projects, Agents, Context a Tools. Konkrétní názvy složek a
+aplikace se mohou lišit; každá informace ale potřebuje jasný domov a vlastníka.
+
+- **Projects:** pracovní i soukromé projekty a aktivity. Každý projekt může mít
+  vlastní zadání, pravidla pro AI, úkoly, historii rozhodnutí, dokumenty a
+  výsledné soubory.
+- **Agents:** agenti, pravidla, skills a pracovní postupy, které určují, jak má
+  AI při konkrétní práci postupovat, co smí udělat a jak ověří výsledek.
+- **Context:** znalosti použitelné napříč prací, například know-how, pracovní
+  profily a ověřená fakta, ale také zdrojové poznámky, přepisy hovorů a další
+  raw podklady.
+- **Tools:** skripty, integrace, napojení na další služby, kontroly a
+  automatizace, pomocí kterých AI provádí konkrétní akce.
+
+## Jak může struktura PACTu vypadat
+
+Každý PACT se přizpůsobí práci svého majitele. Základní struktura může vypadat
+třeba takto:
+
+```text
+PACT/
+├── Projects/
+│   ├── work/
+│   │   └── new-book/
+│   │       ├── README.md
+│   │       ├── AGENTS.md
+│   │       ├── TASKS.md
+│   │       ├── WORKLOG.md
+│   │       ├── manuscript/
+│   │       ├── research/
+│   │       └── author-notes/
+│   └── private/
+│       └── home/
+│           ├── README.md
+│           ├── TASKS.md
+│           ├── contracts/
+│           └── documentation/
+├── Agents/
+│   ├── agent-pact-assistant.md
+│   ├── agent-executive-assistant.md
+│   ├── agent-personal-assistant.md
+│   ├── skills/
+│   └── workflows/
+├── Context/
+│   ├── knowledge/
+│   ├── raw/
+│   │   ├── call-transcripts/
+│   │   ├── slack-conversations/
+│   │   └── plans/
+│   ├── idea-files/
+│   └── handoffs/
+└── Tools/
+    ├── integrations/
+    ├── workflows/
+    └── automations/
 ```
-Pomoz mi nastavit PACT
-```
 
-AI te provede 6 kroky — vyplnis kdo jsi, jak pises, jake mas cile, nastavis API klice, a vytvoris si prvniho agenta. Hotovo za 10 minut.
+`README.md` vysvětluje smysl a současný stav projektu. `AGENTS.md` dává AI
+pravidla pro práci v daném projektu, `TASKS.md` drží otevřené úkoly a
+`WORKLOG.md` zachovává výsledky a důležitá rozhodnutí.
+
+## Pět částí PACTu
+
+### Architektura PACTu
+
+Architektura určuje, kde žijí projekty, pravidla, znalosti a nástroje. Každý
+úkol, údaj a rozhodnutí má jedno platné místo.
+
+### Pracovní koncepty
+
+Pracovní koncepty pomáhají zachytit myšlenku, přenést know-how nebo předat
+rozdělanou práci.
+
+- **Idea File:** samostatně srozumitelný koncept, který můžete poslat člověku
+  nebo vložit do jeho AI bez přístupu k vašemu internímu systému.
+- **Handoff:** předání konkrétní práce kolegovi nebo AI.
+- **Runbook:** opakovatelný postup pro práci, která používá podobné kroky,
+  podmínky a kontrolu výsledku.
+- **Clean:** připravovaný koncept, který zpracuje informaci, nápad nebo
+  myšlenku. Vytáhne obsah z poznámky, obrázku nebo jiného vstupu, odstraní šum,
+  připraví ho do čitelné podoby a podle vašeho pokynu ho uloží do projektu,
+  obsahu, znalostí nebo jinam.
+
+### Řízení projektů s AI
+
+Projektové řízení pomáhá plánovat a řídit společnou práci člověka a AI.
+
+- **README:** účel projektu, současný stav, důležité zdroje a podmínka
+  dokončení.
+- **TASKS:** úkoly, které musí přežít aktuální chat, včetně vlastníka,
+  závislostí a podmínek přijetí.
+- **AI-WBS:** nová generace projektového řízení pro situace, kdy většinu práce
+  odpracovává AI. Rozdělí větší zadání na části, které lze přidělit, ověřit a
+  postupně dokončit.
+- **WORKLOG:** výsledky, rozhodnutí a checkpointy, ze kterých může další agent
+  bezpečně pokračovat.
+
+### Paměť, orientace a bezpečnost
+
+[Paměť a bezpečnost](docs/memory-and-safety.md) udržují PACT použitelný i ve
+chvíli, kdy obsahuje desítky projektů a tisíce souborů.
+
+- **Work Radar:** pomáhá najít, kde a na čem se nedávno pracovalo.
+- **Work Desk:** skládá aktuální úkoly, termíny a signály do jednoho pracovního
+  pohledu, aniž by vytvářel druhou kopii dat.
+- **Čištění znalostí:** odděluje ověřené know-how od raw podkladů, konfliktů a
+  informací, které ještě potřebují lidskou kontrolu.
+- **Bezpečnostní checkpointy:** zastaví publikaci, mazání, práci s citlivými
+  daty a další významné kroky, dokud člověk nepotvrdí přesný dopad.
+
+### Vlastní agenti, nástroje a automatizace
+
+[Rozšiřování PACTu](docs/extending-pact.md) vychází z práce, kterou skutečně
+děláte. Opakující se potřeba může postupně vyrůst v pojmenované workflow,
+specializovaného agenta, integraci nebo automatizaci.
+
+Ve svém PACTu mám například **Book Capture**, protože píšu novou knihu. Když
+narazím na příběh nebo poznatek, jedním pokynem ho uložím do autorského
+zápisníku. **Content Manager** podobně zachytává a třídí myšlenky pro přednášky,
+videa, newsletter nebo sociální sítě.
+
+Někdo jiný si může vytvořit systém pro klientské projekty, výzkum, nábor,
+investice nebo rodinnou administrativu. Společná architektura zůstává stejná,
+konkrétní schopnosti si každý skládá podle vlastní práce.
+
+## Postavte si vlastní Superpowered OS
+
+Novou verzi PACTu teď rozvíjím jako součást podzimního běhu programu
+Future AI Leader, jehož hlavním tématem bude **Superpowered OS**. Účastníci si
+během programu postaví a vyladí vlastní systém pro práci s AI agenty, projekty a
+znalostmi, použitelný v práci i osobním životě. Zkušenosti z programu potom
+použijeme při přípravě jednodušší veřejné verze PACTu.
+
+[Zjistit více o programu Future AI Leader](https://drimalka.com/fail)
 
 ---
 
-## Co je PACT?
-
-Ctyri slozky, ctyri otazky:
-
-| Slozka | Otazka | Co tam patri |
-|--------|--------|-------------|
-| `0_Projects/` | CO delam? | Aktivni projekty s vystupy |
-| `1_Agents/` | JAK to udelat? | Instrukce pro AI — agenti (.md) nebo skills (slozky s SKILL.md) |
-| `2_Context/` | KDO jsem a co delam? | Tvoje identita, styl, expertiza, cile |
-| `3_Tools/` | CIM to udelat? | Skripty, API integrace, utility |
-
-**Proc to funguje:** AI bez kontextu generuje genericky vystup. S PACT ma AI pristup k tomu, kdo jsi, jak komunikujes a co delas — a vysledky jsou radove lepsi.
-
----
-
-## Struktura
-
-```
-pact-starter/
-├── START-HERE.md                  ← Zacni tady
-├── .cursorrules                   ← Pravidla pro Cursor AI (trigger mapping pro 12 agentu)
-├── 0_Projects/                    ← Tvoje projekty
-├── 1_Agents/                      ← AI agenti a skills (12 agentu)
-│   ├── AGENT-REGISTRY.md          ← Prehled vsech agentu + pravidla pro tvorbu
-│   ├── RECIPES.md                 ← 7 workflow retezu (jak kombinovat agenty)
-│   ├── agent-prompt-architect.md  ← Vytvari prompty a dalsi agenty
-│   ├── agent-expert-panel.md      ← Simuluje diskuzi 3-5 real. expertu
-│   ├── agent-deep-researcher.md   ← Hloubkovy vyzkum s citacemi
-│   ├── agent-data-analyst.md      ← Analyza dat (chunking, map-reduce)
-│   ├── agent-product-architect.md ← Z napadu → PRD + Developer Brief
-│   ├── agent-quality-gate.md      ← PASS/FAIL kontrola vystupu
-│   ├── ...a dalsi                 ← Viz AGENT-REGISTRY.md
-│   └── skills/                    ← Skills (slozky s SKILL.md)
-├── 2_Context/                     ← Tvuj kontext
-│   ├── identity/about-me.md
-│   ├── identity/tone-of-voice/
-│   ├── goals/goals.md
-│   └── expertise/
-├── 3_Tools/                       ← Nastroje
-│   ├── api/                       ← API klice + navod
-│   └── README.md                  ← Roadmapa nastroju
-└── docs/                          ← Dokumentace
-    ├── MUJ-PRVNI-AGENT.md         ← Tutorial: jak vytvorit agenta
-    ├── PACT-ARCHITECTURE.md       ← Architektura systemu
-    └── PACT-ZA-5-MINUT.md         ← Rychly prehled
-```
-
----
-
-## Principy
-
-1. **Single Source of Truth** — kontext zije na jednom miste, agenti na nej odkazuji
-2. **Agent = instrukce pro AI** — jednoduchy markdown soubor, nebo skill (slozka s SKILL.md dle [agentskills.io](https://agentskills.io))
-3. **DRY** — zmena na jednom miste se projevi vsude
-4. **Funguje s jakymkoliv AI** — Cursor, Claude Code, ChatGPT, Windsurf
-
----
-
-## Dalsi materialy
-
-- `1_Agents/AGENT-REGISTRY.md` — prehled vsech 12 agentu s popisy
-- `1_Agents/RECIPES.md` — 7 workflow retezu (jak kombinovat agenty)
-- `docs/MUJ-PRVNI-AGENT.md` — tutorial: jak vytvorit vlastniho agenta za 15 minut
-- `docs/PACT-ZA-5-MINUT.md` — rychly pruvodce
-- `docs/PACT-ARCHITECTURE.md` — architektura frameworku
-- `1_Agents/skills/README.md` — skills = strukturovane workflow (otevreny standard [agentskills.io](https://agentskills.io))
-- `3_Tools/api/README.md` — navod na API klice (OpenRouter, OpenAI, Apify)
-- `3_Tools/README.md` — roadmapa nastroju
-
----
-
-*PACT Framework — Filip Drimalka (nowork.ai) — brezen 2026*
+PACT vytváří [Filip Dřímalka](https://drimalka.com) a komunita Future AI
+Leader.
