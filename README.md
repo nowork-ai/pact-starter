@@ -1,6 +1,6 @@
 # PACT: Superpowered OS
 
-**Rámec pro vytvoření vlastního operačního systému pro Superpowered
+**Framework pro vytvoření vlastního operačního systému pro Superpowered
 Professionals™ (znalostní pracovníky, kteří chtějí využívat umělou inteligenci
 naplno).**
 
