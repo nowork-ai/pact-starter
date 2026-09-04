@@ -172,3 +172,27 @@ použijeme při přípravě jednodušší veřejné verze PACTu.
 
 PACT vytváří [Filip Dřímalka](https://drimalka.com) a komunita Future AI
 Leader.
+
+## Licence
+
+Pokud u konkrétního souboru není uvedeno jinak, dokumentace, prompty,
+šablony a instrukce pro agenty v tomto repozitáři jsou dostupné pod licencí
+[Creative Commons Attribution 4.0 International](LICENSE).
+
+Licence platí také pro původní PACT Starter ve větvi
+[`legacy-v0.1`](https://github.com/nowork-ai/pact-starter/tree/legacy-v0.1) a
+release
+[`v0.1-legacy`](https://github.com/nowork-ai/pact-starter/releases/tag/v0.1-legacy).
+
+Obsah můžete používat, upravovat, překládat, uchovávat ve vlastním soukromém
+repozitáři a používat komerčně. Při dalším sdílení uveďte původní zdroj,
+připojte odkaz na licenci a označte provedené změny.
+
+Doporučená atribuce:
+
+> Based on PACT by [Filip Dřímalka](https://drimalka.com), licensed under
+> [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Modified by
+> [your name].
+
+Licence neuděluje práva k ochranným známkám a neznamená, že Filip Dřímalka
+nebo nowork.ai podporují odvozené verze.
