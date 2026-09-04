@@ -92,3 +92,26 @@ pact-starter/
 ---
 
 *PACT Framework — Filip Drimalka (nowork.ai) — brezen 2026*
+
+---
+
+## Licence
+
+Pokud u konkrétního souboru není uvedeno jinak, dokumentace, prompty,
+šablony a instrukce pro agenty v této verzi PACT Starteru jsou dostupné pod
+licencí [Creative Commons Attribution 4.0 International](LICENSE). Licence
+platí také pro historický release
+[`v0.1-legacy`](https://github.com/nowork-ai/pact-starter/releases/tag/v0.1-legacy).
+
+Obsah můžete používat, upravovat, překládat, uchovávat ve vlastním soukromém
+repozitáři a používat komerčně. Při dalším sdílení uveďte původní zdroj,
+připojte odkaz na licenci a označte provedené změny.
+
+Doporučená atribuce:
+
+> Based on PACT by [Filip Dřímalka](https://drimalka.com), licensed under
+> [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Modified by
+> [your name].
+
+Licence neuděluje práva k ochranným známkám a neznamená, že Filip Dřímalka
+nebo nowork.ai podporují odvozené verze.
